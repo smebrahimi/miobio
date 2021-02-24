@@ -8,11 +8,11 @@ import {
 } from 'react-native';
 
 import {
-  Header,
   Colors,
 } from 'react-native/Libraries/NewAppScreen';
 
 import { Input } from './src/components/TextInput'
+import { Button } from './src/components/Button'
 
 const App: () => React$Node = () => {
 
@@ -24,6 +24,11 @@ const App: () => React$Node = () => {
   const onChange = (value) => {
     setValues(value);
   };
+
+  const onPress = () => {
+    console.log(`It's working.`);
+  };
+  
 
   return (
     <>
@@ -55,6 +60,11 @@ const App: () => React$Node = () => {
               helperText="password is required"
               value={values.password}
             ></Input>
+
+            <Button
+              title='Ferienstopp hinzufügen'
+              onPress={onPress}
+            />
           </View>
 
         </ScrollView>

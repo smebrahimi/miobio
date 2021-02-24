@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  StyleSheet,
   View,
   TextInput,
   Text
@@ -27,10 +28,9 @@ const Input = (
     inlineImageLeft,
     ...props
   }) => {
-  const {inputStyle, errorStyle, testErrorStyle, labelStyle} = InputFieldStyles;
   return (
     <View>
-      {label && <Text htmlFor={name} style={labelStyle}>{label}</Text>}
+      {label && <Text htmlFor={name} style={styles.labelStyle}>{label}</Text>}
       <TextInput
         name={name}
         returnKeyType={returnKeyType}
@@ -45,18 +45,17 @@ const Input = (
         underlineColorAndroid={'transparent'}
         blurOnSubmit={true}
         autoCapitalize={ autoCapitalize ? autoCapitalize : 'none' }
-        style={ error ? ( (errorStyles) ? errorStyles : errorStyle ) : (newStyles ? newStyles : inputStyle)}
+        style={ error ? ( (errorStyles) ? errorStyles : styles.errorStyle ) : (newStyles ? newStyles : styles.inputStyle)}
         autoFocus={autoFocus}
         multiline={multiline}
         maxLength={maxLength}
       />
-      {error && <Text style={testErrorStyle}>{ helperText }</Text>}
+      {error && <Text style={styles.textErrorStyle}>{ helperText }</Text>}
     </View>
   );
 };
 
-
-const InputFieldStyles = {
+const styles = StyleSheet.create({
   labelStyle: {
     color: '#A7EB8A'
   },
@@ -78,9 +77,9 @@ const InputFieldStyles = {
     color: '#000',
     paddingHorizontal: 5
   },
-  testErrorStyle: {
+  textErrorStyle: {
     color: 'red'
   }
-};
+});
 
 export {Input};
