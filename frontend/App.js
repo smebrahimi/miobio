@@ -62,7 +62,12 @@ const App: () => React$Node = () => {
             ></Input>
 
             <Button
-              title='Ferienstopp hinzufügen'
+              title="Ferienstopp hinzufügen"
+              onPress={onPress}
+            />
+            <Button
+              type="outline"
+              title="Ferienstopp hinzufügen"
               onPress={onPress}
             />
           </View>
