@@ -11,10 +11,11 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "expo": "40.0.0",
+    "expo": "38.0.0",
     "react": "16.13.1",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-40.0.0.tar.gz",
-    "react-native-safe-area-context": "~3.0.7"
+    "react-native": "0.62.1",
+    "react-native-safe-area-context": "3.1.9",
+    "react-native-splash-screen": "^3.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.17",
