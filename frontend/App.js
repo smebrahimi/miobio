@@ -18,7 +18,7 @@ const App: () => React$Node = () => {
 
   const [values, setValues] = useState({
     email: '',
-    password: '',
+    password: ''
   });
   
   const onChange = (value) => {
@@ -37,8 +37,8 @@ const App: () => React$Node = () => {
             <Input
               label="Email"
               name="email"
-              placeholder="Enter E-mail ..."
-              error={state.error}
+              placeholder="E-Mail"
+              error={false}
               required
               onChange={onChange}
               value={values.email}
@@ -46,8 +46,8 @@ const App: () => React$Node = () => {
 
             <Input
               name="password"
-              placeholder="Enter password..."
-              error={state.error}
+              placeholder="Password"
+              error={true}
               required
               secureTextEntry
               onChange={onChange}

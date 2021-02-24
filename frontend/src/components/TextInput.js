@@ -65,6 +65,7 @@ const InputFieldStyles = {
     backgroundColor: 'white',
     color: 'black',
     paddingHorizontal: 8,
+    paddingVertical: 10,
     borderRadius: 4,
     borderWidth: 2,
     borderColor: '#62C538'
