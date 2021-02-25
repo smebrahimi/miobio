@@ -6,12 +6,11 @@ import {
   View,
   StatusBar,
 } from 'react-native';
-import { StackScreenProps } from '@react-navigation/stack';
 import { Input } from '../components/TextInput'
 import { Button } from '../components/Button'
 
 
-const StyleGuideScreen= ({navigation}) => {
+const StyleGuideScreen= () => {
 
   const [values, setValues] = useState({
     email: '',
@@ -62,16 +61,9 @@ const StyleGuideScreen= ({navigation}) => {
               onPress={onPress}
             />
             <Button
-              type="outline"
+              type="outlined"
               title="Ferienstopp hinzufügen"
               onPress={onPress}
-            />
-
-            <Button
-              title="Go to Home"
-              onPress={() =>
-                navigation.navigate('Home')
-              }
             />
           </View>
 

@@ -6,7 +6,6 @@ import {
   View,
   Text,
 } from 'react-native';
-import { StackScreenProps } from '@react-navigation/stack';
 import { Button } from '../components/Button'
 
 const homeScreen= ({navigation}) => {

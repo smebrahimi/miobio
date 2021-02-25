@@ -1,10 +1,10 @@
 import React from 'react';
 import {
-  StyleSheet,
   View,
   TextInput,
   Text
 } from 'react-native';
+import  baseStyles from '../styles/base'
 
 const Input = (
   {
@@ -16,12 +16,10 @@ const Input = (
     placeholder,
     secureTextEntry,
     error,
-    errorStyles,
     helperText,
     onSubmitEditing,
     returnKeyType,
     keyboardType,
-    newStyles,
     autoFocus,
     multiline,
     maxLength,
@@ -30,7 +28,7 @@ const Input = (
   }) => {
   return (
     <View>
-      {label && <Text htmlFor={name} style={styles.labelStyle}>{label}</Text>}
+      {label && <Text htmlFor={name} style={baseStyles.forms.label}>{label}</Text>}
       <TextInput
         name={name}
         returnKeyType={returnKeyType}
@@ -45,41 +43,14 @@ const Input = (
         underlineColorAndroid={'transparent'}
         blurOnSubmit={true}
         autoCapitalize={ autoCapitalize ? autoCapitalize : 'none' }
-        style={ error ? ( (errorStyles) ? errorStyles : styles.errorStyle ) : (newStyles ? newStyles : styles.inputStyle)}
+        style={[ baseStyles.forms.input, error &&  baseStyles.forms.errorInput ]}
         autoFocus={autoFocus}
         multiline={multiline}
         maxLength={maxLength}
       />
-      {error && <Text style={styles.textErrorStyle}>{ helperText }</Text>}
+      {error && <Text style={baseStyles.forms.errorMessage}>{ helperText }</Text>}
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  labelStyle: {
-    color: '#A7EB8A'
-  },
-  inputStyle: {
-    height: 50,
-    backgroundColor: 'white',
-    color: 'black',
-    paddingHorizontal: 8,
-    paddingVertical: 10,
-    borderRadius: 4,
-    borderWidth: 2,
-    borderColor: '#62C538'
-  },
-  errorStyle: {
-    height: 50,
-    borderColor: 'red',
-    borderWidth: 2,
-    borderRadius: 4,
-    color: '#000',
-    paddingHorizontal: 5
-  },
-  textErrorStyle: {
-    color: 'red'
-  }
-});
 
 export {Input};
