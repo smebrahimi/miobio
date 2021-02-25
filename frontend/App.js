@@ -1,90 +1,28 @@
-import React, { useState } from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  StatusBar,
-} from 'react-native';
+import 'react-native-gesture-handler';
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import StyleGuideScreen from './src/screens/styleGuide';
+import homeScreen from './src/screens/homeSreen';
 
-import {
-  Colors,
-} from 'react-native/Libraries/NewAppScreen';
-
-import { Input } from './src/components/TextInput'
-import { Button } from './src/components/Button'
+const Stack = createStackNavigator();
 
 const App: () => React$Node = () => {
-
-  const [values, setValues] = useState({
-    email: '',
-    password: ''
-  });
-  
-  const onChange = (value) => {
-    setValues(value);
-  };
-
-  const onPress = () => {
-    console.log(`It's working.`);
-  };
-  
-
   return (
-    <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="Home"
+          component={homeScreen}
+        />
+        <Stack.Screen
+          name="Style Guide"
+          component={StyleGuideScreen}
+        />
 
-          <View style={styles.body}>
-            <Input
-              label="Email"
-              name="email"
-              placeholder="E-Mail"
-              error={false}
-              required
-              onChange={onChange}
-              value={values.email}
-            ></Input>
-
-            <Input
-              name="password"
-              placeholder="Password"
-              error={true}
-              required
-              secureTextEntry
-              onChange={onChange}
-              error
-              helperText="password is required"
-              value={values.password}
-            ></Input>
-
-            <Button
-              title="Ferienstopp hinzufügen"
-              onPress={onPress}
-            />
-            <Button
-              type="outline"
-              title="Ferienstopp hinzufügen"
-              onPress={onPress}
-            />
-          </View>
-
-        </ScrollView>
-      </SafeAreaView>
-    </>
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
-
-const styles = StyleSheet.create({
-  scrollView: {
-    backgroundColor: Colors.lighter,
-  },
-  body: {
-    padding: 15
-  }
-});
 
 export default App;
