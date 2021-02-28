@@ -4,10 +4,12 @@ import {
   StyleSheet,
   ScrollView,
   View,
+  Text,
   StatusBar,
 } from 'react-native';
 import { Input } from '../components/TextInput'
 import { Button } from '../components/Button'
+import  baseStyles from '../styles/base'
 
 
 const StyleGuideScreen= () => {
@@ -34,6 +36,37 @@ const StyleGuideScreen= () => {
           style={styles.scrollView}>
 
           <View style={styles.body}>
+            <Text style={baseStyles.h1}>Typography</Text>
+            <Text style={baseStyles.h1}>Freitag, 20. März</Text>
+            <Text style={baseStyles.h2}>Nächste Lieferung</Text>
+            <Text style={baseStyles.h3}>Pastinaken</Text>
+            <Text style={baseStyles.p}>Wenn Du in die Ferien verreist, kannst Du
+              dein Bio Mio Abo für diese Zeit unterbrechen.
+              Du kannst deine Feriendaten im
+              “Ferienstopps” Bereich dieser App
+              hinzufügen.
+            </Text>
+            <Text style={baseStyles.strong}>4 Tage</Text>
+
+            <View>
+              <View style={baseStyles.ul.row}>
+                <Text style={baseStyles.ul.bullet}>{'\u2022'}</Text>
+                <Text style={baseStyles.ul.bulletText}>Freitag, 27. März</Text>
+              </View>
+
+              <View style={baseStyles.ul.row}>
+                <Text style={baseStyles.ul.bullet}>{'\u2022'}</Text>
+                <Text style={baseStyles.ul.bulletText}>Freitag, 27. März</Text>
+              </View>
+
+              <View style={baseStyles.ul.row}>
+                <Text style={baseStyles.ul.bullet}>{'\u2022'}</Text>
+                <Text style={baseStyles.ul.bulletText}>Freitag, 27. März</Text>
+              </View>
+            </View>
+
+
+
             <Input
               label="Email"
               name="email"

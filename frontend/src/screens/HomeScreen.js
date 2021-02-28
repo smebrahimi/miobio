@@ -6,7 +6,7 @@ import {
   View,
   Text,
 } from 'react-native';
-import { Button } from '../components/Button'
+import  baseStyles from '../styles/base'
 
 const homeScreen= ({navigation}) => {
   return (
@@ -17,14 +17,8 @@ const homeScreen= ({navigation}) => {
           style={styles.scrollView}>
 
           <View style={styles.body}>
-            <Text>Hiiii</Text>
+            <Text style={baseStyles.h1}>Mio Bio</Text>
           </View>
-          <Button
-            title="Style Guide"
-            onPress={() =>
-              navigation.navigate('Style Guide')
-            }
-          />
         </ScrollView>
       </SafeAreaView>
     </>

@@ -29,8 +29,19 @@ export default {
     fontSize: 17
   },
   ul: {
-    color: BLACK,
-    fontSize: 17
+    row: {
+      flexDirection: 'row',
+      alignItems: 'center'
+    },
+    bullet: {
+      fontSize:26,
+      color: BLACK,
+    },
+    bulletText: {
+      color: BLACK,
+      fontSize: 17,
+      paddingHorizontal: 7,
+    }
   },
   strong: {
     color: BLACK,
@@ -110,6 +121,55 @@ export default {
     errorMessage: {
       color: RED,
       fontSize: 15
+    }
+  },
+  tag: {
+    fontSize: 15,
+    color: WHITE,
+    backgroundColor: GREEN_LIGHT,
+    borderRadius: 13,
+    paddingHorizontal: 10,
+    paddingVertical: 2
+  },
+  alerts: {
+    info: {
+      fontSize: 15,
+      color: WHITE,
+      borderWidth: 1,
+      borderColor: 'rgba(255,255,255, 0.3)',
+      backgroundColor: 'rgba(255,255,255, 0.1)'
+    },
+    success: {
+      fontSize: 15,
+      color: GREEN,
+      borderWidth: 1,
+      borderColor: GREEN_LIGHT,
+      backgroundColor: '#E8F6E3'
+    },
+    alert: {
+      fontSize: 15,
+      color: RED,
+      borderWidth: 1,
+      borderColor: '#FABDBF',
+      backgroundColor: '#F9EFEF'
+    },
+    links: {
+      link: {
+        fontSize: 17,
+        color: GREEN
+      },
+      linkSmall: {
+        fontSize: 15,
+        color: GREEN
+      },
+      linkAlt: {
+        fontSize: 15,
+        color: GREEN_LIGHT
+      },
+      linkEdit: {
+        fontSize: 15,
+        color: GREEN
+      }
     }
   }
 }
