@@ -5,7 +5,7 @@ import {
   ScrollView,
   View,
   Text,
-  StatusBar,
+  StatusBar
 } from 'react-native';
 import { Input } from '../components/TextInput'
 import { Button } from '../components/Button'
@@ -29,8 +29,10 @@ const StyleGuideScreen= () => {
 
   return (
     <>
-      <StatusBar barStyle="dark-content" />
       <SafeAreaView>
+      <StatusBar
+        animated={true}
+        backgroundColor={baseStyles.statusBar.backgroundColor} />
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
@@ -64,8 +66,6 @@ const StyleGuideScreen= () => {
                 <Text style={baseStyles.ul.bulletText}>Freitag, 27. März</Text>
               </View>
             </View>
-
-
 
             <Input
               label="Email"
@@ -107,9 +107,6 @@ const StyleGuideScreen= () => {
 };
 
 const styles = StyleSheet.create({
-  scrollView: {
-    backgroundColor: 'white',
-  },
   body: {
     padding: 15
   }

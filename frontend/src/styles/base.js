@@ -1,32 +1,32 @@
-const GREEN_DARK = '#1C3810';
-const GREEN = '#4E9D2D';
-const GREEN_BORDER= '#62C538';
-const GREEN_LIGHT = '#A7EB8A';
-const BROWN = '#522C18';
-const RED = '#FF4E52';
-const BLACK = '#0A1406';
-const GREY_DARK = '#616161';
-const GREY = '#BFBFBF';
-const GREY_LIGHT = '#EFEFEF';
-const OFF_WHITE = '#F9F9F9';
-const WHITE = '#FFFFFF';
+import {theme} from './theme'
 
 export default {
+  navigation: {
+    colors: {
+      primary: theme.GREEN_LIGHT,
+      card: theme.GREEN_DARK,
+      text: theme.WHITE,
+      notification: 'rgb(255, 69, 58)',
+    }
+  },
+  statusBar: {
+    backgroundColor: theme.GREEN_DARK
+  },
   h1: {
-    color: GREEN_DARK,
-    fontSize: 25
+    color: theme.GREEN_DARK,
+    fontSize: theme.TEXT_LARGE_SIZE
   },
   h2: {
-    color: GREEN_DARK,
-    fontSize: 17
+    color: theme.GREEN_DARK,
+    fontSize: theme.TEXT_MEDIUM_SIZE
   },
   h3: {
-    color: GREEN,
-    fontSize: 17
+    color: theme.GREEN,
+    fontSize: theme.TEXT_MEDIUM_SIZE
   },
   p: {
-    color: BLACK,
-    fontSize: 17
+    color: theme.BLACK,
+    fontSize: theme.TEXT_MEDIUM_SIZE
   },
   ul: {
     row: {
@@ -35,35 +35,35 @@ export default {
     },
     bullet: {
       fontSize:26,
-      color: BLACK,
+      color: theme.BLACK,
     },
     bulletText: {
-      color: BLACK,
-      fontSize: 17,
+      color: theme.BLACK,
+      fontSize: theme.TEXT_MEDIUM_SIZE,
       paddingHorizontal: 7,
     }
   },
   strong: {
-    color: BLACK,
-    fontSize: 17
+    color: theme.BLACK,
+    fontSize: theme.TEXT_MEDIUM_SIZE
   },
   appHeader: {
     title: {
-      color: WHITE,
-      fontSize: 15
+      color: theme.WHITE,
+      fontSize: theme.TEXT_PRIMARY_SIZE
     },
     links: {
-      color: GREEN_LIGHT,
-      fontSize: 13
+      color: theme.GREEN_LIGHT,
+      fontSize: theme.TEXT_SMALL_SIZE
     }
   },
   tabBar: {
-    fontSize: 13,
+    fontSize: theme.TEXT_SMALL_SIZE,
     active: {
-      color: GREEN_LIGHT
+      color: theme.GREEN_LIGHT
     },
     default: {
-      color: WHITE
+      color: theme.WHITE
     }
   },
   button: {
@@ -71,7 +71,7 @@ export default {
     borderRadius: 23,
     justifyContent: 'center',
     alignItems: 'center',
-    shadowColor: BLACK,
+    shadowColor: theme.BLACK,
     shadowOpacity: 0.16,
     shadowOffset: {
       width: 0,
@@ -81,94 +81,94 @@ export default {
   },
   btnPrimary: {
     text: {
-      color: WHITE,
-      fontSize: 15,
+      color: theme.WHITE,
+      fontSize: theme.TEXT_PRIMARY_SIZE,
       textTransform: 'uppercase'
     },
-    backgroundColor: GREEN,
+    backgroundColor: theme.GREEN,
   },
   btnSecondary: {
     text: {
-      color: GREEN,
-      fontSize: 15,
+      color: theme.GREEN,
+      fontSize: theme.TEXT_PRIMARY_SIZE,
       textTransform: 'uppercase'
     },
-    backgroundColor: WHITE,
+    backgroundColor: theme.WHITE,
     borderWidth: 2,
-    borderColor: GREEN,
+    borderColor: theme.GREEN,
   },
   forms: {
     label: {
-      fontSize: 15,
-      color: GREEN_LIGHT
+      fontSize: theme.TEXT_PRIMARY_SIZE,
+      color: theme.GREEN_LIGHT
     },
     input: {
       height: 50,
-      backgroundColor: WHITE,
-      fontSize: 17,
-      color: BLACK,
+      backgroundColor: theme.WHITE,
+      fontSize: theme.TEXT_MEDIUM_SIZE,
+      color: theme.BLACK,
       borderWidth: 2,
-      borderColor: GREEN_LIGHT,
+      borderColor: theme.GREEN_LIGHT,
       borderRadius: 4,
       paddingHorizontal: 8,
       paddingVertical: 10
     },
     errorInput: {
-      borderColor: 'red',
+      borderColor: theme.RED,
       borderWidth: 2,
       paddingHorizontal: 5
     },
     errorMessage: {
-      color: RED,
-      fontSize: 15
+      color: theme.RED,
+      fontSize: theme.TEXT_PRIMARY_SIZE
     }
   },
   tag: {
-    fontSize: 15,
-    color: WHITE,
-    backgroundColor: GREEN_LIGHT,
+    fontSize: theme.TEXT_PRIMARY_SIZE,
+    color: theme.WHITE,
+    backgroundColor: theme.GREEN_LIGHT,
     borderRadius: 13,
     paddingHorizontal: 10,
     paddingVertical: 2
   },
   alerts: {
     info: {
-      fontSize: 15,
-      color: WHITE,
+      fontSize: theme.TEXT_PRIMARY_SIZE,
+      color: theme.WHITE,
       borderWidth: 1,
       borderColor: 'rgba(255,255,255, 0.3)',
       backgroundColor: 'rgba(255,255,255, 0.1)'
     },
     success: {
-      fontSize: 15,
-      color: GREEN,
+      fontSize: theme.TEXT_PRIMARY_SIZE,
+      color: theme.GREEN,
       borderWidth: 1,
-      borderColor: GREEN_LIGHT,
-      backgroundColor: '#E8F6E3'
+      borderColor: theme.GREEN_LIGHT,
+      backgroundColor: theme.ALERTS_SUCCESS
     },
     alert: {
-      fontSize: 15,
-      color: RED,
+      fontSize: theme.TEXT_PRIMARY_SIZE,
+      color: theme.RED,
       borderWidth: 1,
       borderColor: '#FABDBF',
       backgroundColor: '#F9EFEF'
     },
     links: {
       link: {
-        fontSize: 17,
-        color: GREEN
+        fontSize: theme.TEXT_MEDIUM_SIZE,
+        color: theme.GREEN
       },
       linkSmall: {
-        fontSize: 15,
-        color: GREEN
+        fontSize: theme.TEXT_PRIMARY_SIZE,
+        color: theme.GREEN
       },
       linkAlt: {
-        fontSize: 15,
-        color: GREEN_LIGHT
+        fontSize: theme.TEXT_PRIMARY_SIZE,
+        color: theme.GREEN_LIGHT
       },
       linkEdit: {
-        fontSize: 15,
-        color: GREEN
+        fontSize: theme.TEXT_PRIMARY_SIZE,
+        color: theme.GREEN
       }
     }
   }
